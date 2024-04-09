@@ -33,6 +33,32 @@ const Intro = () => {
     const period = 1000;
 
     useEffect(() => {
+        const tick = () => {
+            let i = loopNum % rotatingTexts.length;
+
+            let fullText = rotatingTexts[i];
+            // console.log(fullText, i);
+
+            let updatedText = isDeleting
+                ? fullText.substring(0, text.length - 1)
+                : fullText.substring(0, text.length + 1);
+
+            setText(updatedText);
+
+            if (isDeleting) {
+                setDelta((prevDelta) => prevDelta / 2);
+            }
+
+            if (!isDeleting && updatedText === fullText) {
+                setDelta(period);
+                setIsDeleting(true);
+            } else if (isDeleting && updatedText === "") {
+                setDelta(300 - Math.random() * 100);
+                setIsDeleting(false);
+                setloopNum(loopNum + 1);
+            }
+        };
+
         const ticker = setInterval(() => {
             tick();
         }, delta);
@@ -41,32 +67,6 @@ const Intro = () => {
             clearInterval(ticker);
         };
     }, [text]);
-
-    const tick = () => {
-        let i = loopNum % rotatingTexts.length;
-
-        let fullText = rotatingTexts[i];
-        // console.log(fullText, i);
-
-        let updatedText = isDeleting
-            ? fullText.substring(0, text.length - 1)
-            : fullText.substring(0, text.length + 1);
-
-        setText(updatedText);
-
-        if (isDeleting) {
-            setDelta((prevDelta) => prevDelta / 2);
-        }
-
-        if (!isDeleting && updatedText === fullText) {
-            setDelta(period);
-            setIsDeleting(true);
-        } else if (isDeleting && updatedText === "") {
-            setDelta(300 - Math.random() * 100);
-            setIsDeleting(false);
-            setloopNum(loopNum + 1);
-        }
-    };
 
     return (
         <div className="w-full flex flex-col sm:flex-row justify-between h-screen sm:pt-20 bg-gradient-primary">
@@ -82,7 +82,7 @@ const Intro = () => {
                             WebkitTextFillColor: "transparent",
                         }}
                     >
-                        Hi, I'm Zonayed
+                        Hi, I&apos;m Zonayed
                     </h1>
                 </div>
 
