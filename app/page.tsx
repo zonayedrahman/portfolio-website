@@ -8,6 +8,9 @@ import Image from "next/image";
 export default function Home() {
     return (
         <main className="App relative">
+            <h2 className="fixed  bottom-6 right-10 text-lg text-white text-opacity-40">
+                IN PROGRESS 🚧! Can still contact me at the bottom!
+            </h2>
             <Header />
 
             <div className="h-auto" id="home">

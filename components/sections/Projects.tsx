@@ -60,7 +60,7 @@ const ProjectsData = [
                 description: "A system for managing flights and passengers",
                 content:
                     "With a focus on database management, the system allows for the managing of airlines, airplanes, flight scheduling, ticketing, passengers, and bookings. The system is built using Flask and MySQL. The system allows for authorization from different user types, such as staff and passengers.",
-                githubLink: "https://github.com/project8",
+                githubLink: "https://github.com/zonayedrahman/Flights-Manager",
             },
         ],
     },
