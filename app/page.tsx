@@ -17,7 +17,7 @@ export default function Home() {
                 <Intro />
             </div>
 
-            <div className="h-auto" id="about-me">
+            <div className="h-auto scroll-mt-28" id="about-me">
                 <AboutMe />
             </div>
 

@@ -70,11 +70,11 @@ const Intro = () => {
 
     return (
         <div className="w-full flex flex-col sm:flex-row justify-between h-screen sm:pt-20 bg-gradient-primary">
-            <div className="w-full sm:w-[60%] h-full flex flex-col gap-6 items-center pt-36 sm:pt-72 sm:pl-48 text-white">
+            <div className="w-full sm:w-[60%] h-full flex flex-col gap-4 items-center pt-36 sm:pt-72 sm:pl-48 text-white">
                 <div className="w-[70%]">
-                    <h1 className="opacity-70 ">Welcome to my website</h1>
+                    <h1 className="opacity-40 ">Welcome to my website</h1>
                     <h1
-                        className="text-left font-bold pt-4 sm:pt-0 text-[2em] sm:text-[3em]"
+                        className="text-left font-bold pt-4 sm:pt-0 text-[2em] sm:text-[3.2rem]"
                         style={{
                             background:
                                 "linear-gradient(to right, purple, red)",
@@ -87,11 +87,11 @@ const Intro = () => {
                 </div>
 
                 <div className=" w-[70%]">
-                    <p className="text-left text-[2em] mb-6 font-thin">
+                    <p className="text-left text-[2.4rem] mb-6 font-thin">
                         I love to {text}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6">
-                        <Button variant="secondary">
+                        <Button variant="secondary" className="">
                             <a href="#about-me">About Me</a>
                         </Button>
                         <Button variant="outline" className="bg-transparent">

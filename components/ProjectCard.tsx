@@ -19,7 +19,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
     return (
-        <Card className="h-[350px] w-[350px] bg-slate-800 text-white flex flex-col z-10">
+        <Card className="h-[450px] w-[400px] bg-slate-800 text-white flex flex-col z-10">
             <CardHeader className=" h-[30%]  pt-6 mb-2">
                 <CardTitle className="text-[1.4em] text-nowrap">
                     {project.name}
@@ -37,7 +37,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Button>View on Github</Button>
+                    <Button className="hover:scale-110 hover:border-white hover:border transition-all duration-300">
+                        View on Github
+                    </Button>
                 </a>
                 {/* <p>View on GitHub:</p>
                 <p>{project.githubLink}</p> */}
