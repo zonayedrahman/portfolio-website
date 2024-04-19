@@ -79,18 +79,19 @@ const ProjectsData = [
             },
             {
                 id: 8,
+                name: "PDF Parser",
+                description: "Parse through PDFs to extract data",
+                content:
+                    "A PDF parser that extracts lines and paragraphs that includes specified keywords and adjacent. Built using Python, mainly PyPDF2 and re libraries. The parser is able to extract data from multiple PDFs and output the data to a text, PDF, or CSV file.",
+                githubLink: "https://github.com/zonayedrahman/restaurant",
+            },
+            {
+                id: 9,
                 name: "Lemon Restaurant",
                 description: "Restaurant website",
                 content:
                     "A website for a restaurant, allowing for logging in and making reservations. Mainly for practicing backend API and JWT token authentication practice. Django Rest Framwork and jwt library were used.",
                 githubLink: "https://github.com/zonayedrahman/restaurant",
-            },
-            {
-                id: 9,
-                name: "Project 9",
-                description: "Description of Project 9",
-                content: "Content of Project 9",
-                githubLink: "https://github.com/project9",
             },
         ],
     },
